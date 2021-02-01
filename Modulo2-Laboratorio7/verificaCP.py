@@ -1,5 +1,3 @@
-#Define funcoes para verificar a logica de execucao de uma aplicacao leitor/escritor
-
 class Monitor:
 	def __init__(self):
 		self.numElementos = 0
@@ -27,7 +25,7 @@ class Monitor:
 		self.numElementos+=1
 
 	def produtorSaindo(self,id):
-		'''Recebe o id do leitor e registra que terminou a leitura.'''
+		'''Recebe o id do produtor que terminou a inserção.'''
 
 	def consumidorSaindo(self,id):
-		'''Recebe o id do escritor e registra que terminou a leitura.'''
+		'''Recebe o id do consumidor que terminou a remoção.'''
