@@ -151,6 +151,9 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
+    pthread_mutex_init(&mutex, NULL);
+    pthread_cond_init(&cond, NULL);
+
     // Pegando os parametros de entrada
     size = atoll(argv[1]);
     nthreads = atoll(argv[2]);
@@ -194,12 +197,12 @@ int main(int argc, char *argv[]) {
     GET_TIME(fim);
 
     // Sleep para contornar o problema de nao ter controle sobre a condiçao de parada
-    sleep(10);
+    sleep(5);
 
     // Print do array ordenado
-    /*for(int i = 0; i < size; i++) {
+    for(int i = 0; i < size; i++) {
        printf("%d ", array[i]);
-    }*/
+    }
 
     printf("\nTempo: %lf\n", fim - inicio);
 
